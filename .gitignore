@@ -1,0 +1,5 @@
+appsettings.Development.json
+node_modules/
+*.log
+bin/
+obj/

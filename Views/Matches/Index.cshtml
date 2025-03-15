@@ -1,0 +1,39 @@
+﻿@model IEnumerable<EventManager.Models.Match>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>View Matches</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Event)
+            </th>
+            <th>Players</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var match in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => match.Event.EventTitle)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => match.Player1.Name) vs @Html.DisplayFor(modelItem => match.Player2.Name)
+                </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@match.MatchID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@match.MatchID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@match.MatchID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

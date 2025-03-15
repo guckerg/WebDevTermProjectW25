@@ -1,0 +1,47 @@
+﻿@model EventManager.Models.Match
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Match</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <!-- select event -->
+            <div class="form-group">
+                <label asp-for="Event" class="control-label"></label>
+                <select asp-for="EventID" class="form-control" asp-items="ViewBag.EventID"></select>
+            </div>
+            <!-- pick players -->
+            <div class="form-group d-flex justify-content-between">
+                <div style="flex: 1; margin-right: 10px;">
+                    <label asp-for="Player1" class="control-label">Player 1</label>
+                    <select name="Player1ID" asp-for="Player1" class="form-control" asp-items="ViewBag.PlayerID"></select>
+                </div>
+                <div style="flex: 1; margin-left: 10px;">
+                    <label asp-for="Player2" class="control-label">Player 2</label>
+                    <select name="Player2ID" asp-for="Player2" class="form-control" asp-items="ViewBag.PlayerID"></select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

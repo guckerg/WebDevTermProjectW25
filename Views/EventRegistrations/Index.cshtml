@@ -1,0 +1,42 @@
+﻿@model IEnumerable<EventManager.Models.EventRegistration>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>View Event Registrations</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Event)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event.EventTitle)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.RegistrationID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.RegistrationID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.RegistrationID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

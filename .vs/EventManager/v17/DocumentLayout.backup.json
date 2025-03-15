@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|c:\\users\\gabri\\onedrive\\desktop\\cs296n asp.net part 2\\repos\\eventmanager\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|c:\\users\\gabri\\onedrive\\desktop\\cs296n asp.net part 2\\repos\\eventmanager\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|c:\\users\\gabri\\onedrive\\desktop\\cs296n asp.net part 2\\repos\\eventmanager\\controllers\\matchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|solutionrelative:controllers\\matchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|c:\\users\\gabri\\onedrive\\desktop\\cs296n asp.net part 2\\repos\\eventmanager\\views\\matches\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|solutionrelative:views\\matches\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|c:\\users\\gabri\\onedrive\\desktop\\cs296n asp.net part 2\\repos\\eventmanager\\views\\matches\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|solutionrelative:views\\matches\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T01:16:45.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowD4AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T01:13:10.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Views\\Matches\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Matches\\Index.cshtml",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Views\\Matches\\Index.cshtml",
+              "RelativeToolTip": "Views\\Matches\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T01:11:27.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Views\\Matches\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Matches\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Views\\Matches\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Matches\\Delete.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAuwBkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T01:09:42.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MatchesController.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Controllers\\MatchesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MatchesController.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Controllers\\MatchesController.cs",
+              "RelativeToolTip": "Controllers\\MatchesController.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAqwLAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T00:56:20.652Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
