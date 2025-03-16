@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EventManager.Data;
 using EventManager.Models;
+using EventManager.Models.ViewModels;
 
 namespace EventManager.Controllers
 {
@@ -48,40 +49,71 @@ namespace EventManager.Controllers
 
         public IActionResult Create()
         {
-            ViewData["EventID"] = new SelectList(_context.Events, "EventID", "EventTitle");
-            ViewData["UserID"] = new SelectList(_context.Set<AppUser>(), "Id", "Name");
-            return View();
+            var viewModel = new EventRegistrationViewModel
+            {
+                EventRegistration = new EventRegistration(),
+                Users = _context.Set<AppUser>().Select(u => new SelectListItem
+                {
+                    Value = u.Id,
+                    Text = u.Name
+                }),
+                Events = _context.Events.Select(e => new SelectListItem
+                {
+                    Value = e.EventID.ToString(),
+                    Text = e.EventTitle
+                })
+            };
+
+            return View(viewModel);
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("RegistrationID,UserID,EventID")] EventRegistration eventRegistration)
+        public async Task<IActionResult> Create(EventRegistration eventRegistration)
         {
-            if (eventRegistration.UserID != null && eventRegistration.EventID > 0)
+            if(eventRegistration.UserID != null && eventRegistration.EventID > 0)
             {
                 eventRegistration.User = await _context.Set<AppUser>()
                     .FirstOrDefaultAsync(u => u.Id == eventRegistration.UserID);
                 eventRegistration.Event = await _context.Events
                     .FirstOrDefaultAsync(e => e.EventID == eventRegistration.EventID);
-
-                if (eventRegistration.User == null || eventRegistration.Event == null)
-                {
-                    // Handle the case where the User or Event doesn't exist
-                    ModelState.AddModelError("", "Invalid User or Event selected.");
-                }
-                else
-                {
-                    _context.Add(eventRegistration);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
-                }
             }
 
-            ViewData["EventID"] = new SelectList(_context.Events, "EventID", "EventTitle", eventRegistration.EventID);
-            ViewData["UserID"] = new SelectList(_context.Set<AppUser>(), "Id", "Name", eventRegistration.UserID);
+            var existingRegistration = await _context.Set<EventRegistration>()
+                .FirstOrDefaultAsync(r =>
+                    r.UserID == eventRegistration.UserID &&
+                    r.EventID == eventRegistration.EventID);
+            if (existingRegistration != null)
+            {
+                ModelState.AddModelError("", "The user is already registered for this event.");
+            }
+            else
+            {
+                _context.Add(eventRegistration);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
 
-            return View(eventRegistration);
+            //repopulate dropdown data if the ModelState is invalid
+            var viewModel = new EventRegistrationViewModel
+            {
+                EventRegistration = new EventRegistration(),
+                Users = _context.Set<AppUser>().Select(u => new SelectListItem
+                {
+                    Value = u.Id,
+                    Text = u.Name
+                }),
+                Events = _context.Events.Select(e => new SelectListItem
+                {
+                    Value = e.EventID.ToString(),
+                    Text = e.EventTitle
+                })
+            };
+
+            return View(viewModel);
         }
+
 
 
         public async Task<IActionResult> Edit(int? id)

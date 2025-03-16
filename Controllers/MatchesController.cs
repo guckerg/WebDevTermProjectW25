@@ -87,18 +87,15 @@ namespace EventManager.Controllers
                 {
                     ModelState.AddModelError("", "A player cannot play against themselves.");
                 }
-                if (ModelState.IsValid)
-                {
-                    //Populate match
-                    match.Player1 = player1;
-                    match.Player2 = player2;
-                    match.Event = await _context.Events.FirstOrDefaultAsync(e => e.EventID == match.EventID);
+                //Populate match
+                match.Player1 = player1;
+                match.Player2 = player2;
+                match.Event = await _context.Events.FirstOrDefaultAsync(e => e.EventID == match.EventID);
 
-                    //add to DB
-                    _context.Add(match);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
-                }
+                //add to DB
+                _context.Add(match);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
             // Repopulate dropdowns on validation failure
             ViewData["EventID"] = new SelectList(_context.Events.Where(e => !e.IsLive), "EventID", "EventTitle", match.EventID);
