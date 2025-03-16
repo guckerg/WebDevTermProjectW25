@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using EventManager.Data;
 using EventManager.Models;
 using EventManager.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EventManager.Controllers
 {
@@ -47,6 +48,7 @@ namespace EventManager.Controllers
             return View(eventRegistration);
         }
 
+        [Authorize]
         public IActionResult Create()
         {
             var viewModel = new EventRegistrationViewModel
@@ -67,7 +69,7 @@ namespace EventManager.Controllers
             return View(viewModel);
         }
 
-
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(EventRegistration eventRegistration)
@@ -114,8 +116,7 @@ namespace EventManager.Controllers
             return View(viewModel);
         }
 
-
-
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.EventRegistrations == null)
@@ -133,6 +134,7 @@ namespace EventManager.Controllers
             return View(eventRegistration);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("RegistrationID,UserID,EventID")] EventRegistration eventRegistration)
@@ -167,6 +169,7 @@ namespace EventManager.Controllers
             return View(eventRegistration);
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.EventRegistrations == null)
@@ -186,6 +189,7 @@ namespace EventManager.Controllers
             return View(eventRegistration);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<EventManager.Models.EventRegistration>
-
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<AppUser> SignInManager
 @{
     ViewData["Title"] = "Index";
 }
@@ -7,7 +8,10 @@
 <h1>View Event Registrations</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <a asp-action="Create">Create New</a>
+    }
 </p>
 <table class="table">
     <thead>
@@ -32,9 +36,12 @@
                     @Html.DisplayFor(modelItem => item.Event.EventTitle)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.RegistrationID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.RegistrationID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.RegistrationID">Delete</a>
+                    @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.RegistrationID">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.RegistrationID">Delete</a>
+                    }
+                    <a asp-action="Details" asp-route-id="@item.RegistrationID">Details</a>
                 </td>
             </tr>
         }

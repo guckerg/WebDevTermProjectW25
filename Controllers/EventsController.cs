@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EventManager.Data;
 using EventManager.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EventManager.Controllers
 {
@@ -45,12 +46,14 @@ namespace EventManager.Controllers
             return View(@event);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("EventTitle,EventDate,Game,MaxParticipants,IsLive")] Event @event)
@@ -72,6 +75,7 @@ namespace EventManager.Controllers
             return View(@event);
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Events == null)
@@ -87,6 +91,7 @@ namespace EventManager.Controllers
             return View(@event);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("EventID,EventTitle,EventDate,Game,MaxParticipants,IsLive")] Event @event)
@@ -119,6 +124,7 @@ namespace EventManager.Controllers
             return View(@event);
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Events == null)
@@ -136,6 +142,7 @@ namespace EventManager.Controllers
             return View(@event);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

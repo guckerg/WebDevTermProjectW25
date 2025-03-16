@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EventManager.Data;
 using EventManager.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EventManager.Controllers
 {
@@ -30,7 +31,7 @@ namespace EventManager.Controllers
             return View(await applicationDbContext.ToListAsync());
         }
 
-
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Matches == null)
@@ -49,6 +50,7 @@ namespace EventManager.Controllers
             return View(match);
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             //show events that havent started yet only
@@ -64,8 +66,7 @@ namespace EventManager.Controllers
             return View();
         }
 
-
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("MatchID,EventID")] Match match, string Player1ID, string Player2ID)
@@ -103,6 +104,7 @@ namespace EventManager.Controllers
             return View(match);
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Matches == null)
@@ -119,6 +121,7 @@ namespace EventManager.Controllers
             return View(match);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MatchID,EventID")] Match match)
@@ -152,6 +155,7 @@ namespace EventManager.Controllers
             return View(match);
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -173,6 +177,7 @@ namespace EventManager.Controllers
             return View(match);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
