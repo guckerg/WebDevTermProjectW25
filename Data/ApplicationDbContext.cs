@@ -60,7 +60,7 @@ public class ApplicationDbContext : IdentityDbContext<AppUser>
                 {
                     EventID = 1,
                     EventTitle = "Flesh and Blood CC Armory",
-                    EventDate = new DateTime(2025, 4, 15, 17, 30, 0),
+                    EventDate = new DateTime(2025, 3, 17),
                     Game = "Flesh and Blood",
                     MaxParticipants = 24,
                     IsLive = true
@@ -69,7 +69,7 @@ public class ApplicationDbContext : IdentityDbContext<AppUser>
                 {
                     EventID = 2,
                     EventTitle = "DigimonTCG BT20",
-                    EventDate = new DateTime(2025, 5, 10, 12, 30, 0),
+                    EventDate = new DateTime(2025, 5, 10),
                     Game = "DigimonTCG",
                     MaxParticipants = 16,
                     IsLive = false
@@ -78,7 +78,16 @@ public class ApplicationDbContext : IdentityDbContext<AppUser>
                 {
                     EventID = 3,
                     EventTitle = "MTG Bloomburrow Draft",
-                    EventDate = new DateTime(2025, 6, 11, 12, 0, 0),
+                    EventDate = new DateTime(2025, 6, 11),
+                    Game = "Magic: The Gathering",
+                    MaxParticipants = 50,
+                    IsLive = false
+                },
+                new Event
+                {
+                    EventID = 4,
+                    EventTitle = "Pokemon: Standard",
+                    EventDate = new DateTime(2025, 3, 26),
                     Game = "Magic: The Gathering",
                     MaxParticipants = 50,
                     IsLive = false

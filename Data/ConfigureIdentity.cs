@@ -20,6 +20,12 @@ namespace EventManager.Data
             const string PASSWORD = "Secret123!";
             await CreateUser("admin", "", PASSWORD, ADMIN);
             await CreateUser("Gabe", "Gucker", PASSWORD, PLAYER);
+            await CreateUser("Sam", "Black", PASSWORD, PLAYER);
+            await CreateUser("Reid", "Duke", PASSWORD, PLAYER);
+            await CreateUser("Patrick", "Chapin", PASSWORD, PLAYER);
+            await CreateUser("Paul", "Cheon", PASSWORD, PLAYER);
+            await CreateUser("Brodie", "Spurlock", PASSWORD, PLAYER);
+            await CreateUser("Zak", "Miller", PASSWORD, PLAYER);
 
         }
 

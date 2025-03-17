@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|c:\\users\\gabri\\onedrive\\desktop\\cs296n asp.net part 2\\repos\\eventmanager\\views\\events\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|solutionrelative:views\\events\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|c:\\users\\gabri\\onedrive\\desktop\\cs296n asp.net part 2\\repos\\eventmanager\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|c:\\users\\gabri\\onedrive\\desktop\\cs296n asp.net part 2\\repos\\eventmanager\\controllers\\eventregistrationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|solutionrelative:controllers\\eventregistrationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|c:\\users\\gabri\\onedrive\\desktop\\cs296n asp.net part 2\\repos\\eventmanager\\data\\configureidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|solutionrelative:data\\configureidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|c:\\users\\gabri\\onedrive\\desktop\\cs296n asp.net part 2\\repos\\eventmanager\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4ED9127F-34B9-4D7A-8C3C-889B8052836D}|EventManager.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,28 +38,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Views\\Events\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Events\\Index.cshtml",
-              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Views\\Events\\Index.cshtml",
-              "RelativeToolTip": "Views\\Events\\Index.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADwAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-16T19:03:30.102Z",
+              "DocumentIndex": 1,
+              "Title": "ConfigureIdentity.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Data\\ConfigureIdentity.cs",
+              "RelativeDocumentMoniker": "Data\\ConfigureIdentity.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Data\\ConfigureIdentity.cs",
+              "RelativeToolTip": "Data\\ConfigureIdentity.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T20:04:27.819Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EventRegistrationsController.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Controllers\\EventRegistrationsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\EventRegistrationsController.cs",
-              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Controllers\\EventRegistrationsController.cs",
-              "RelativeToolTip": "Controllers\\EventRegistrationsController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAD4AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T19:01:27.778Z",
+              "WhenOpened": "2025-03-17T20:04:08.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\CS296N ASP.NET Part 2\\repos\\EventManager\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-17T19:47:47.112Z",
               "EditorCaption": ""
             }
           ]
